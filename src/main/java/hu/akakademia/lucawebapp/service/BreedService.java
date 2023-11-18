@@ -12,7 +12,9 @@ public interface BreedService {
     void save(Breed theBreed);
 
     void saveAll(List<Breed> breeds);
+
     void deleteById(int theId);
 
 
+    void deleteAll();
 }

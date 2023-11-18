@@ -1,17 +1,17 @@
 package hu.akakademia.lucawebapp;
 
-import hu.akakademia.lucawebapp.entity.dog.Breed;
-import hu.akakademia.lucawebapp.populate.BreedListGenerator;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
-import java.util.List;
+import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class LucawebappApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LucawebappApplication.class, args);
+		ConfigurableApplicationContext apc = SpringApplication.run(LucawebappApplication.class, args);
+		for (String s:apc.getBeanDefinitionNames()) {
+			System.out.println(s);
+		}
 	}
 
 }

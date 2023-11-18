@@ -50,4 +50,10 @@ public class BreedServiceImpl implements BreedService {
     public void deleteById(int theId) {
         breedRepository.deleteById(theId);
     }
+
+
+    @Override
+    public void deleteAll() {
+        breedRepository.deleteAll();
+    }
 }

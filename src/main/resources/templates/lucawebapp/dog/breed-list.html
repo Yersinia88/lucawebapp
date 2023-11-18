@@ -12,7 +12,7 @@
 
     <title>Breed List</title>
 </head>
-<body>
+<body class="height_100">
 <h3>Luca Webapp</h3>
 <hr>
 <!-- Add a button -->
@@ -20,11 +20,19 @@
    class="btn btn-primary btn-sm mb-3">
     Add Breed
 </a>
+
 <a th:href="@{/lucawebapp/dog/breed/populate}"
    class="btn btn-danger btn-sm mb-3"
    onclick="if(!(confirm('Are you sure you want to populate this table?'))) return false">
     Populate
 </a>
+
+<a th:href="@{/lucawebapp/dog/breed/deleteAll}"
+   class="btn btn-danger btn-sm mb-3"
+   onclick="if(!(confirm('Are you sure you want to delete everything from this table?'))) return false">
+    Delete All
+</a>
+<hr>
 <table class="table table-bordered table-striped">
     <thead class="table-dark">
     <tr>

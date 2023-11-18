@@ -38,6 +38,18 @@ public class BreedController {
         return "redirect:/lucawebapp/dog/breed/list";
     }
 
+//    @GetMapping("/select")
+//    public String selectBreed(@RequestParam("breedId") int theId, Model theModel) {
+//        Breed theBreed = breedService.findById(theId);
+//        theModel.addAttribute("breed", theBreed);
+//        return "redirect:/lucawebapp/dog/breed/list";
+//    }
+
+    @GetMapping("/deleteAll")
+    private String deleteAll() {
+        breedService.deleteAll();
+        return "redirect:/lucawebapp/dog/breed/list";
+    }
     @GetMapping("/showFormForAdd")
     public String showFormForAdd(Model theModel) {
         //create the model attribute to bint the for mdata
@@ -71,5 +83,4 @@ public class BreedController {
         breedService.deleteById(theId);
         return "redirect:/lucawebapp/dog/breed/list";
     }
-
 }

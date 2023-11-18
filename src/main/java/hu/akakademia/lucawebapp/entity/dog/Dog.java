@@ -26,6 +26,11 @@ public class Dog {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Column(name="id")
     private int id;
+
+    //TODO - Controller-ben is kell ezt kezelni? Beállítom a breed_id-t ehhez?
+    @OneToOne (cascade = CascadeType.DETACH)
+    @JoinColumn(name="dog_breed_id")
+    private Breed breed;
     @Column(name="active")
     private boolean active;
 
