@@ -14,7 +14,7 @@ import java.util.List;
 @RequestMapping("/lucawebapp/dog/breed")
 public class BreedController {
     private BreedService breedService;
-    private String fileName = "C:\\Users\\Yersinia\\Programozas\\MyProjects\\Luca_App\\SprinBoot\\lucawebapp\\src\\main\\resources\\database\\breeds.txt";
+    private String fileName = "resources/database/breeds.txt";
     private List<Breed> basicBreedList = new BreedListGenerator().fillBreedList(fileName);
 
     @Autowired
